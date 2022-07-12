@@ -19,90 +19,90 @@ function App() {
   let cities = [
     { name: "Mumbai", state: "Maharashtra", lat: "18.975", lon: "72.825833" },
     { name: "Delhi", state: "Delhi", lat: "28.7041", lon: "77.1025" },
-    // {
-    //   name: "Bangalore",
-    //   state: "Karnataka",
-    //   lat: "12.983333",
-    //   lon: "77.583333",
-    // },
-    // {
-    //   name: "Hyderabad",
-    //   state: "Telangana",
-    //   lat: "17.375278",
-    //   lon: "78.474444",
-    // },
-    // {
-    //   name: "Ahmedabad",
-    //   state: "Gujarat",
-    //   lat: "23.033333",
-    //   lon: "72.616667",
-    // },
-    // {
-    //   name: "Chennai",
-    //   state: "Tamil Nadu",
-    //   lat: "13.083333",
-    //   lon: "80.283333",
-    // },
-    // {
-    //   name: "Kolkata",
-    //   state: "West Bengal",
-    //   lat: "22.569722",
-    //   lon: "88.369722",
-    // },
-    // { name: "Surat", state: "Gujarat", lat: "20.966667", lon: "72.9" },
-    // {
-    //   name: "Pune",
-    //   state: "Maharashtra",
-    //   lat: "18.533333",
-    //   lon: "73.866667",
-    // },
-    // { name: "Jaipur", state: "Rajasthan", lat: "24.583333", lon: "86.85" },
-    // {
-    //   name: "Lucknow",
-    //   state: "Uttar Pradesh",
-    //   lat: "26.85",
-    //   lon: "80.916667",
-    // },
-    // {
-    //   name: "Kanpur",
-    //   state: "Uttar Pradesh",
-    //   lat: "26.466667",
-    //   lon: "80.35",
-    // },
-    // { name: "Nagpur", state: "Maharashtra", lat: "23.3", lon: "82.3" },
-    // {
-    //   name: "Indore",
-    //   state: "Madhya Pradesh",
-    //   lat: "22.716667",
-    //   lon: "75.833333",
-    // },
-    // { name: "Thane", state: "Maharashtra", lat: "19.2", lon: "72.966667" },
-    // {
-    //   name: "Bhopal",
-    //   state: "Madhya Pradesh",
-    //   lat: "23.266667",
-    //   lon: "77.4",
-    // },
-    // {
-    //   name: "Visakhapatnam",
-    //   state: "Andhra Pradesh",
-    //   lat: "17.7",
-    //   lon: "83.3",
-    // },
-    // {
-    //   name: "Pimpri-Chinchwad",
-    //   state: "Maharashtra",
-    //   lat: "18.6279288",
-    //   lon: "73.8009829",
-    // },
-    // { name: "Patna", state: "Bihar", lat: "23.3", lon: "82.666667" },
-    // { name: "Vadodara", state: "Gujarat", lat: "22.3", lon: "73.2" },
-    // {
-    //   name: "Ghaziabad",
-    //   state: "Uttar Pradesh",
-    //   lat: "28.666667",
-    //   lon: "77.433333",
-    // },
+    {
+      name: "Bangalore",
+      state: "Karnataka",
+      lat: "12.983333",
+      lon: "77.583333",
+    },
+    {
+      name: "Hyderabad",
+      state: "Telangana",
+      lat: "17.375278",
+      lon: "78.474444",
+    },
+    {
+      name: "Ahmedabad",
+      state: "Gujarat",
+      lat: "23.033333",
+      lon: "72.616667",
+    },
+    {
+      name: "Chennai",
+      state: "Tamil Nadu",
+      lat: "13.083333",
+      lon: "80.283333",
+    },
+    {
+      name: "Kolkata",
+      state: "West Bengal",
+      lat: "22.569722",
+      lon: "88.369722",
+    },
+    { name: "Surat", state: "Gujarat", lat: "20.966667", lon: "72.9" },
+    {
+      name: "Pune",
+      state: "Maharashtra",
+      lat: "18.533333",
+      lon: "73.866667",
+    },
+    { name: "Jaipur", state: "Rajasthan", lat: "24.583333", lon: "86.85" },
+    {
+      name: "Lucknow",
+      state: "Uttar Pradesh",
+      lat: "26.85",
+      lon: "80.916667",
+    },
+    {
+      name: "Kanpur",
+      state: "Uttar Pradesh",
+      lat: "26.466667",
+      lon: "80.35",
+    },
+    { name: "Nagpur", state: "Maharashtra", lat: "23.3", lon: "82.3" },
+    {
+      name: "Indore",
+      state: "Madhya Pradesh",
+      lat: "22.716667",
+      lon: "75.833333",
+    },
+    { name: "Thane", state: "Maharashtra", lat: "19.2", lon: "72.966667" },
+    {
+      name: "Bhopal",
+      state: "Madhya Pradesh",
+      lat: "23.266667",
+      lon: "77.4",
+    },
+    {
+      name: "Visakhapatnam",
+      state: "Andhra Pradesh",
+      lat: "17.7",
+      lon: "83.3",
+    },
+    {
+      name: "Pimpri-Chinchwad",
+      state: "Maharashtra",
+      lat: "18.6279288",
+      lon: "73.8009829",
+    },
+    { name: "Patna", state: "Bihar", lat: "23.3", lon: "82.666667" },
+    { name: "Vadodara", state: "Gujarat", lat: "22.3", lon: "73.2" },
+    {
+      name: "Ghaziabad",
+      state: "Uttar Pradesh",
+      lat: "28.666667",
+      lon: "77.433333",
+    },
     { name: "Ludhiana", state: "Punjab", lat: "30.9", lon: "75.85" },
     {
       name: "Agra",
@@ -110,186 +110,186 @@ function App() {
       lat: "27.183333",
       lon: "78.016667",
     },
-    // {
-    //   name: "Nashik",
-    //   state: "Maharashtra",
-    //   lat: "20.0110224",
-    //   lon: "73.7903373",
-    // },
-    // {
-    //   name: "Faridabad",
-    //   state: "Haryana",
-    //   lat: "28.433333",
-    //   lon: "77.316667",
-    // },
-    // { name: "Meerut", state: "Uttar Pradesh", lat: "28.983333", lon: "77.7" },
-    // { name: "Rajkot", state: "Gujarat", lat: "25.731111", lon: "75.5925" },
-    // {
-    //   name: "Kalyan-Dombivali",
-    //   state: "Maharashtra",
-    //   lat: "19.235433",
-    //   lon: "73.129889",
-    // },
-    // {
-    //   name: "Vasai-Virar",
-    //   state: "Maharashtra",
-    //   lat: "19.4258788",
-    //   lon: "72.8224901",
-    // },
-    // { name: "Varanasi", state: "Uttar Pradesh", lat: "25.333333", lon: "83" },
-    // {
-    //   name: "Srinagar",
-    //   state: "Jammu and Kashmir",
-    //   lat: "30.216667",
-    //   lon: "78.783333",
-    // },
-    // {
-    //   name: "Aurangabad",
-    //   state: "Maharashtra",
-    //   lat: "26.596",
-    //   lon: "79.9701",
-    // },
-    // { name: "Dhanbad", state: "Jharkhand", lat: "23.8", lon: "86.45" },
-    // { name: "Amritsar", state: "Punjab", lat: "31.633056", lon: "74.865556" },
-    // {
-    //   name: "Navi Mumbai",
-    //   state: "Maharashtra",
-    //   lat: "19.033049",
-    //   lon: "73.029662",
-    // },
-    // { name: "Allahabad", state: "Uttar Pradesh", lat: "25.45", lon: "81.85" },
-    // { name: "Ranchi", state: "Jharkhand", lat: "23.35", lon: "85.333333" },
-    // {
-    //   name: "Howrah",
-    //   state: "West Bengal",
-    //   lat: "22.589167",
-    //   lon: "88.310278",
-    // },
-    // {
-    //   name: "Coimbatore",
-    //   state: "Tamil Nadu",
-    //   lat: "10.9925",
-    //   lon: "76.961389",
-    // },
-    // {
-    //   name: "Jabalpur",
-    //   state: "Madhya Pradesh",
-    //   lat: "23.166667",
-    //   lon: "79.95",
-    // },
-    // {
-    //   name: "Gwalior",
-    //   state: "Madhya Pradesh",
-    //   lat: "26.223611",
-    //   lon: "78.179167",
-    // },
-    // {
-    //   name: "Vijayawada",
-    //   state: "Andhra Pradesh",
-    //   lat: "16.516667",
-    //   lon: "80.616667",
-    // },
-    // { name: "Jodhpur", state: "Rajasthan", lat: "26.286667", lon: "73.03" },
-    // {
-    //   name: "Madurai",
-    //   state: "Tamil Nadu",
-    //   lat: "9.933333",
-    //   lon: "78.116667",
-    // },
-    // { name: "Raipur", state: "Chhattisgarh", lat: "30.316667", lon: "78.1" },
-    // { name: "Kota", state: "Rajasthan", lat: "29.825278", lon: "78.671389" },
-    // { name: "Guwahati", state: "Assam", lat: "26.183333", lon: "91.733333" },
-    // {
-    //   name: "Chandigarh",
-    //   state: "Chandigarh",
-    //   lat: "30.7343",
-    //   lon: "76.7933",
-    // },
-    // {
-    //   name: "Solapur",
-    //   state: "Maharashtra",
-    //   lat: "17.683333",
-    //   lon: "75.916667",
-    // },
-    // {
-    //   name: "Hubballi-Dharwad",
-    //   state: "Karnataka",
-    //   lat: "15.364708",
-    //   lon: "75.123955",
-    // },
-    // {
-    //   name: "Bareilly",
-    //   state: "Uttar Pradesh",
-    //   lat: "28.35",
-    //   lon: "79.416667",
-    // },
-    // {
-    //   name: "Moradabad",
-    //   state: "Uttar Pradesh",
-    //   lat: "28.833333",
-    //   lon: "78.783333",
-    // },
-    // {
-    //   name: "Mysore",
-    //   state: "Karnataka",
-    //   lat: "12.307222",
-    //   lon: "76.649722",
-    // },
-    // { name: "Gurgaon", state: "Haryana", lat: "27.6928", lon: "79.6766" },
-    // {
-    //   name: "Aligarh",
-    //   state: "Uttar Pradesh",
-    //   lat: "27.883333",
-    //   lon: "78.083333",
-    // },
-    // { name: "Jalandhar", state: "Punjab", lat: "23.9", lon: "78.433333" },
-    // {
-    //   name: "Tiruchirappalli",
-    //   state: "Tamil Nadu",
-    //   lat: "10.805",
-    //   lon: "78.685556",
-    // },
-    // {
-    //   name: "Bhubaneswar",
-    //   state: "Orissa",
-    //   lat: "20.233333",
-    //   lon: "85.833333",
-    // },
-    // { name: "Salem", state: "Tamil Nadu", lat: "15.7", lon: "73.916667" },
-    // {
-    //   name: "Mira-Bhayandar",
-    //   state: "Maharashtra",
-    //   lat: "19.295233",
-    //   lon: "72.854390\t",
-    // },
-    // { name: "Warangal", state: "Telangana", lat: "18", lon: "79.583333" },
-    // {
-    //   name: "Thiruvananthapuram",
-    //   state: "Kerala",
-    //   lat: "8.506944",
-    //   lon: "76.956944",
-    // },
-    // { name: "Guntur", state: "Andhra Pradesh", lat: "16.3", lon: "80.45" },
-    // { name: "Bhiwandi", state: "Maharashtra", lat: "19.3", lon: "73.066667" },
-    // {
-    //   name: "Saharanpur",
-    //   state: "Uttar Pradesh",
-    //   lat: "29.966667",
-    //   lon: "77.55",
-    // },
-    // {
-    //   name: "Gorakhpur",
-    //   state: "Uttar Pradesh",
-    //   lat: "26.755",
-    //   lon: "83.373889",
-    // },
-    // { name: "Bikaner", state: "Rajasthan", lat: "28.016667", lon: "73.3" },
-    // {
-    //   name: "Amravati",
-    //   state: "Maharashtra",
-    //   lat: "20.933333",
-    //   lon: "77.75",
-    // },
+    {
+      name: "Nashik",
+      state: "Maharashtra",
+      lat: "20.0110224",
+      lon: "73.7903373",
+    },
+    {
+      name: "Faridabad",
+      state: "Haryana",
+      lat: "28.433333",
+      lon: "77.316667",
+    },
+    { name: "Meerut", state: "Uttar Pradesh", lat: "28.983333", lon: "77.7" },
+    { name: "Rajkot", state: "Gujarat", lat: "25.731111", lon: "75.5925" },
+    {
+      name: "Kalyan-Dombivali",
+      state: "Maharashtra",
+      lat: "19.235433",
+      lon: "73.129889",
+    },
+    {
+      name: "Vasai-Virar",
+      state: "Maharashtra",
+      lat: "19.4258788",
+      lon: "72.8224901",
+    },
+    { name: "Varanasi", state: "Uttar Pradesh", lat: "25.333333", lon: "83" },
+    {
+      name: "Srinagar",
+      state: "Jammu and Kashmir",
+      lat: "30.216667",
+      lon: "78.783333",
+    },
+    {
+      name: "Aurangabad",
+      state: "Maharashtra",
+      lat: "26.596",
+      lon: "79.9701",
+    },
+    { name: "Dhanbad", state: "Jharkhand", lat: "23.8", lon: "86.45" },
+    { name: "Amritsar", state: "Punjab", lat: "31.633056", lon: "74.865556" },
+    {
+      name: "Navi Mumbai",
+      state: "Maharashtra",
+      lat: "19.033049",
+      lon: "73.029662",
+    },
+    { name: "Allahabad", state: "Uttar Pradesh", lat: "25.45", lon: "81.85" },
+    { name: "Ranchi", state: "Jharkhand", lat: "23.35", lon: "85.333333" },
+    {
+      name: "Howrah",
+      state: "West Bengal",
+      lat: "22.589167",
+      lon: "88.310278",
+    },
+    {
+      name: "Coimbatore",
+      state: "Tamil Nadu",
+      lat: "10.9925",
+      lon: "76.961389",
+    },
+    {
+      name: "Jabalpur",
+      state: "Madhya Pradesh",
+      lat: "23.166667",
+      lon: "79.95",
+    },
+    {
+      name: "Gwalior",
+      state: "Madhya Pradesh",
+      lat: "26.223611",
+      lon: "78.179167",
+    },
+    {
+      name: "Vijayawada",
+      state: "Andhra Pradesh",
+      lat: "16.516667",
+      lon: "80.616667",
+    },
+    { name: "Jodhpur", state: "Rajasthan", lat: "26.286667", lon: "73.03" },
+    {
+      name: "Madurai",
+      state: "Tamil Nadu",
+      lat: "9.933333",
+      lon: "78.116667",
+    },
+    { name: "Raipur", state: "Chhattisgarh", lat: "30.316667", lon: "78.1" },
+    { name: "Kota", state: "Rajasthan", lat: "29.825278", lon: "78.671389" },
+    { name: "Guwahati", state: "Assam", lat: "26.183333", lon: "91.733333" },
+    {
+      name: "Chandigarh",
+      state: "Chandigarh",
+      lat: "30.7343",
+      lon: "76.7933",
+    },
+    {
+      name: "Solapur",
+      state: "Maharashtra",
+      lat: "17.683333",
+      lon: "75.916667",
+    },
+    {
+      name: "Hubballi-Dharwad",
+      state: "Karnataka",
+      lat: "15.364708",
+      lon: "75.123955",
+    },
+    {
+      name: "Bareilly",
+      state: "Uttar Pradesh",
+      lat: "28.35",
+      lon: "79.416667",
+    },
+    {
+      name: "Moradabad",
+      state: "Uttar Pradesh",
+      lat: "28.833333",
+      lon: "78.783333",
+    },
+    {
+      name: "Mysore",
+      state: "Karnataka",
+      lat: "12.307222",
+      lon: "76.649722",
+    },
+    { name: "Gurgaon", state: "Haryana", lat: "27.6928", lon: "79.6766" },
+    {
+      name: "Aligarh",
+      state: "Uttar Pradesh",
+      lat: "27.883333",
+      lon: "78.083333",
+    },
+    { name: "Jalandhar", state: "Punjab", lat: "23.9", lon: "78.433333" },
+    {
+      name: "Tiruchirappalli",
+      state: "Tamil Nadu",
+      lat: "10.805",
+      lon: "78.685556",
+    },
+    {
+      name: "Bhubaneswar",
+      state: "Orissa",
+      lat: "20.233333",
+      lon: "85.833333",
+    },
+    { name: "Salem", state: "Tamil Nadu", lat: "15.7", lon: "73.916667" },
+    {
+      name: "Mira-Bhayandar",
+      state: "Maharashtra",
+      lat: "19.295233",
+      lon: "72.854390\t",
+    },
+    { name: "Warangal", state: "Telangana", lat: "18", lon: "79.583333" },
+    {
+      name: "Thiruvananthapuram",
+      state: "Kerala",
+      lat: "8.506944",
+      lon: "76.956944",
+    },
+    { name: "Guntur", state: "Andhra Pradesh", lat: "16.3", lon: "80.45" },
+    { name: "Bhiwandi", state: "Maharashtra", lat: "19.3", lon: "73.066667" },
+    {
+      name: "Saharanpur",
+      state: "Uttar Pradesh",
+      lat: "29.966667",
+      lon: "77.55",
+    },
+    {
+      name: "Gorakhpur",
+      state: "Uttar Pradesh",
+      lat: "26.755",
+      lon: "83.373889",
+    },
+    { name: "Bikaner", state: "Rajasthan", lat: "28.016667", lon: "73.3" },
+    {
+      name: "Amravati",
+      state: "Maharashtra",
+      lat: "20.933333",
+      lon: "77.75",
+    },
     // {
     //   name: "Noida",
     //   state: "Uttar Pradesh",
@@ -831,15 +831,18 @@ function App() {
     });
     setHour(arr);
   };
-  console.log(current);
+  console.log(location);
   const getdata = async () => {
-    const dt = await fetch(`http://ip-api.com/json`);
-    const res = await dt.json();
-    setMycity([res.city, res.lat, res.lon]);
-    setShow({ city: res.city, state: res.regionName });
+    // const dt = await fetch(`http://ip-api.com/json`);
+    // const res = await dt.json();
+    setMycity(["Jaipur", 26.9525, 75.7105]);
+    // console.log(location.coordinates.lat, "inside");
+
+    setShow({ city: "", state: "" });
     const d = await fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${res.lat}&lon=${res.lon}&exclude=minutely,alerts&units=metric&appid=59589b872259d97bdc1ecc8f0d409933`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${location.coordinates.lat}&lon=${location.coordinates.long}&exclude=minutely,alerts&units=metric&appid=59589b872259d97bdc1ecc8f0d409933`
     );
+
     const s = await d.json();
     setStore([...s.daily]);
     const arr = [];
@@ -863,7 +866,7 @@ function App() {
     let obj = {
       humidity: s.current.humidity,
       pressure: s.current.pressure,
-      temp: Math.ceil(s.current.temp),
+      temp: Math.floor(s.current.temp),
       id: s.current.weather[0].icon,
     };
 
@@ -921,7 +924,7 @@ function App() {
             border: ".5px solid black",
             fontWeight: "600",
             marginTop: "20px",
-            marginLeft: "300px",
+            marginLeft: "270px",
             borderRadius: "5px ",
             boxShadow: "5px 5px 5px 5px grey",
           }}
@@ -951,7 +954,7 @@ function App() {
                   >
                     {i.name},{i.state}
                   </p>
-                  <p style={{ marginRight: "20px" }}>IN</p>
+                  <p style={{ marginRight: "20px" }}>IN C &deg;</p>
                 </div>
               </div>
             );
@@ -974,13 +977,11 @@ function App() {
           >
             {names &&
               store.map((i, j) => {
-                // console.log(i.weather[0].icon);
                 return (
                   <div
                     style={{
                       width: "120px",
                       height: "150px",
-                      // border: "1px solid black",
                     }}
                     onClick={getdata}
                     className="dailyData"
@@ -991,7 +992,7 @@ function App() {
                       src={`http://openweathermap.org/img/wn/${i.weather[0].icon}@2x.png`}
                       style={{ width: "80px", height: "80px" }}
                     />
-                    <span>{i.temp.day}</span>
+                    <span>{i.temp.day} &deg;</span>
                     <br />
                     <span>{i.weather[0].main}</span>
                   </div>
@@ -1018,7 +1019,7 @@ function App() {
                 marginLeft: "20px",
               }}
             >
-              <h1> {current && current[0].temp}</h1>
+              <h1> {current && current[0].temp}&deg;</h1>
               <img
                 src={`http://openweathermap.org/img/wn/${current[0].id}@2x.png`}
               />

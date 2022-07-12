@@ -22,66 +22,14 @@ ChartJS.register(
   Filler
 );
 
-export const DynamicChart = ({ daily, pressure, humidity }) => {
+export const Dynamic = ({ daily, pressure, humidity }) => {
   let arr = daily.slice(0, 25);
   const [data, setData] = useState({
-    labels: [
-      "00",
-      "01",
-      "02",
-      "03",
-      "04",
-      "05",
-      "06",
-      "07",
-      "08",
-      "09",
-      "10",
-      "11",
-      "12",
-      "13",
-      "14",
-      "15",
-      "16",
-      "17",
-      "18",
-      "19",
-      "20",
-      "21",
-      "22",
-      "23",
-      "00",
-    ],
+    labels: ["5am ", "2pm", "6pm"],
     datasets: [
       {
         label: "Temprature",
-        data: [
-          "00",
-          "01",
-          "02",
-          "03",
-          "04",
-          "05",
-          "06",
-          "07",
-          "08",
-          "09",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15",
-          "16",
-          "17",
-          "18",
-          "19",
-          "20",
-          "21",
-          "22",
-          "23",
-          "00",
-        ],
+        data: ["5.4", "6.9"],
         backgroundColor: "#b5dffe",
         borderColor: "#008ffb",
         tension: 0.4,
@@ -147,10 +95,7 @@ export const DynamicChart = ({ daily, pressure, humidity }) => {
         >
           humidity
           <br />
-          <span>
-            {humidity}
-            <b> %</b>
-          </span>
+          {humidity}
         </h2>
       </div>
     </div>
