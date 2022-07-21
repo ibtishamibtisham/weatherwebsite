@@ -1,9 +1,19 @@
-.App {
+/* .App {
   text-align: center;
 }
 *{
   font-weight: bold;
 }
 .dailyData:hover{
-  border-color: "1px solid blue";
+background-color: #b5dffe;
+} */
+.myinpt{
+  width: 60%;
+  border: 1px solid grey;
+  height: 60px;
+  font-weight: 600;
+  box-shadow: 5px 10px 10px 5px grey;
+  margin-top: 60px;
+  border-radius: 5px;
+  margin-left: 300px;
 }

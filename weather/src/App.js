@@ -15,7 +15,7 @@ function App() {
   const [input, setInput] = useState("");
   const [current, setCurrent] = useState([]);
   const [show, setShow] = useState({ city: "", state: "" });
-
+  console.log(location, "lo");
   let cities = [
     { name: "Mumbai", state: "Maharashtra", lat: "18.975", lon: "72.825833" },
     { name: "Delhi", state: "Delhi", lat: "28.7041", lon: "77.1025" },
@@ -822,7 +822,7 @@ function App() {
   const [daily, setDaily] = useState([]);
   const mydata = async (i, j) => {
     const d = await fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${i}&lon=${j}&exclude=minutely,alerts&units=metric&appid=59589b872259d97bdc1ecc8f0d409933`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${i}&lon=${j}&exclude=minutely,alerts&units=metric&appid=db7a74be0f30ca31539e9daa0f2fd658`
     );
     const dta = await d.json();
     const arr = [];
@@ -831,16 +831,12 @@ function App() {
     });
     setHour(arr);
   };
-  console.log(location);
+  //get own city data
   const getdata = async () => {
-    // const dt = await fetch(`http://ip-api.com/json`);
-    // const res = await dt.json();
-    setMycity(["Jaipur", 26.9525, 75.7105]);
-    // console.log(location.coordinates.lat, "inside");
-
     setShow({ city: "", state: "" });
+
     const d = await fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${location.coordinates.lat}&lon=${location.coordinates.long}&exclude=minutely,alerts&units=metric&appid=59589b872259d97bdc1ecc8f0d409933`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${location.coordinates.lat}&lon=${location.coordinates.long}&exclude=minutely,alerts&units=metric&appid=db7a74be0f30ca31539e9daa0f2fd658`
     );
 
     const s = await d.json();
@@ -860,7 +856,7 @@ function App() {
   };
   const sendData = async (i, j) => {
     const d = await fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${i}&lon=${j}&exclude=minutely,alerts&units=metric&appid=59589b872259d97bdc1ecc8f0d409933`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${i}&lon=${j}&exclude=minutely,alerts&units=metric&appid=db7a74be0f30ca31539e9daa0f2fd658`
     );
     const s = await d.json();
     let obj = {
@@ -875,20 +871,22 @@ function App() {
   const searchData = async (i, j) => {
     setStatus(true);
     const d = await fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${i}&lon=${j}&exclude=minutely,alerts&units=metric&appid=8270d83908ea7a1363a33067622368ee`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${i}&lon=${j}&exclude=minutely,alerts&units=metric&appid=db7a74be0f30ca31539e9daa0f2fd658`
     );
     const s = await d.json();
+
     setStore([...s.daily]);
+
     const arr = [];
     s.hourly.map((i) => {
       arr.push(i.temp);
     });
     setHour(arr);
   };
+  //fetch current data
   useEffect(() => {
     getdata();
-  }, []);
-  console.log(show);
+  }, [location]);
   const search = (e) => {
     let { value } = e.target;
     const matches = cities.filter((city) => city.name.match(value));
@@ -908,12 +906,12 @@ function App() {
           boxShadow: "5px 10px 10px 5px grey",
           marginTop: "60px",
           borderRadius: "5px",
-          margin: "auto",
         }}
         onChange={search}
         onClick={() => {
           setStatus(!status);
         }}
+        className="myinpt"
       />
       {status == false ? (
         <div
@@ -928,6 +926,7 @@ function App() {
             borderRadius: "5px ",
             boxShadow: "5px 5px 5px 5px grey",
           }}
+          className="mysearch"
         >
           {filterdcity.map((i) => {
             return (
@@ -965,14 +964,14 @@ function App() {
           <div
             style={{
               width: "60%",
-              height: "152px",
+              height: "170px",
               display: "flex",
               margin: "auto",
-              gap: "2px",
+              gap: "5px",
               cursor: "pointer",
               marginTop: "20px",
-              // overflowX: "scroll",
               marginBottom: "20px",
+              overflowX: "scroll",
             }}
           >
             {names &&
@@ -980,10 +979,11 @@ function App() {
                 return (
                   <div
                     style={{
-                      width: "120px",
+                      width: "140px",
                       height: "150px",
+                      border: "5px solid #008ffb",
                     }}
-                    onClick={getdata}
+                    onClick={searchData}
                     className="dailyData"
                   >
                     <span>{names[j]}</span>
@@ -1003,13 +1003,14 @@ function App() {
             style={{
               width: "70%",
               border: "1px solid grey",
-              height: "1000px",
+              height: "30%",
               fontWeight: "600",
               boxShadow: "5px 10px 10px 5px grey",
               marginTop: "20px",
               borderRadius: "5px",
               margin: "auto",
             }}
+            className="maincont"
           >
             <div
               style={{

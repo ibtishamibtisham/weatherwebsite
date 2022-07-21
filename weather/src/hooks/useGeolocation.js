@@ -25,5 +25,6 @@ export const useGeoLoaction = () => {
     }
     navigator.geolocation.getCurrentPosition(onSuccess, onErr);
   }, []);
+  console.log(location);
   return location;
 };
