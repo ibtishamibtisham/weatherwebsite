@@ -898,15 +898,6 @@ function App() {
       <input
         name="search"
         placeholder={`${show.city}, ${show.state}`}
-        style={{
-          width: "60%",
-          border: "1px solid grey",
-          height: "60px",
-          fontWeight: "600",
-          boxShadow: "5px 10px 10px 5px grey",
-          marginTop: "60px",
-          borderRadius: "5px",
-        }}
         onChange={search}
         onClick={() => {
           setStatus(!status);
@@ -914,20 +905,7 @@ function App() {
         className="myinpt"
       />
       {status == false ? (
-        <div
-          style={{
-            width: "60%",
-            border: "1px solid blue",
-            height: "auto",
-            border: ".5px solid black",
-            fontWeight: "600",
-            marginTop: "20px",
-            marginLeft: "270px",
-            borderRadius: "5px ",
-            boxShadow: "5px 5px 5px 5px grey",
-          }}
-          className="mysearch"
-        >
+        <div className="mysearch">
           {filterdcity.map((i) => {
             return (
               <div
@@ -961,19 +939,7 @@ function App() {
         </div>
       ) : (
         <>
-          <div
-            style={{
-              width: "60%",
-              height: "170px",
-              display: "flex",
-              margin: "auto",
-              gap: "5px",
-              cursor: "pointer",
-              marginTop: "20px",
-              marginBottom: "20px",
-              overflowX: "scroll",
-            }}
-          >
+          <div className="daycontainer">
             {names &&
               store.map((i, j) => {
                 return (
@@ -999,19 +965,7 @@ function App() {
                 );
               })}
           </div>
-          <div
-            style={{
-              width: "70%",
-              border: "1px solid grey",
-              height: "30%",
-              fontWeight: "600",
-              boxShadow: "5px 10px 10px 5px grey",
-              marginTop: "20px",
-              borderRadius: "5px",
-              margin: "auto",
-            }}
-            className="maincont"
-          >
+          <div className="mainContainer">
             <div
               style={{
                 width: "100px",

@@ -89,14 +89,7 @@ export const DynamicChart = ({ daily, pressure, humidity }) => {
   }
 
   return (
-    <div
-      style={{
-        width: "900px",
-        height: "800px",
-        margin: "auto",
-        marginTop: "80px",
-      }}
-    >
+    <div className="chart">
       <Line data={data}></Line>
       <div
         style={{
