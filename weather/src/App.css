@@ -19,7 +19,7 @@ input{
 }
 .mysearch{
   width: 60%;
-  border: 1px solid blue;
+  border: 1px solid rgb(196, 196, 214);
   height: auto;
   border: .5px solid black;
   font-weight: 600;
@@ -31,7 +31,7 @@ input{
     .mainContainer{
               width: 70%;
               border: 1px solid grey;
-              height: 30%;
+              height: 40%;
               font-weight: 600;
               box-shadow: 2px 5px 5px 5px grey;
               margin-top: 20px;
@@ -54,24 +54,24 @@ input{
               gap: 5px;
               cursor: pointer;
               margin-top: 20px;
-              margin-bottom: 20px;     
-
+              margin-bottom: 20px;    
    } 
 @media screen and (max-width: 500px){
   input{
   width:90%;
   margin:auto;
-  margin-left: 10px;
+
   height:40px;
   }
   .mysearch{
     width:90%;
     margin:auto;
-    margin-left: 10px;
+
+
   } 
   .mainContainer{
       width:90%;
-      height:500px;
+      height:550px;
   }
   .chart{
         width: 100%;

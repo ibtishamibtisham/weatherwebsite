@@ -15,7 +15,10 @@ function App() {
   const [input, setInput] = useState("");
   const [current, setCurrent] = useState([]);
   const [show, setShow] = useState({ city: "", state: "" });
-  console.log(location, "lo");
+  const [sunrise, setSunrise] = useState([]);
+  const [dt, setDt] = useState("");
+  const [cd, setCd] = useState(false);
+
   let cities = [
     { name: "Mumbai", state: "Maharashtra", lat: "18.975", lon: "72.825833" },
     { name: "Delhi", state: "Delhi", lat: "28.7041", lon: "77.1025" },
@@ -838,9 +841,14 @@ function App() {
     const d = await fetch(
       `https://api.openweathermap.org/data/2.5/onecall?lat=${location.coordinates.lat}&lon=${location.coordinates.long}&exclude=minutely,alerts&units=metric&appid=db7a74be0f30ca31539e9daa0f2fd658`
     );
-
     const s = await d.json();
+    const sunrisedata = [];
+    const sunrise = new Date(s.current.sunrise * 1000);
+    const sunset = new Date(s.current.sunset * 1000);
+    sunrisedata.push(sunrise, sunset);
+    setSunrise(sunrisedata);
     setStore([...s.daily]);
+    console.log(s);
     const arr = [];
     s.hourly.map((i) => {
       arr.push(i.temp);
@@ -870,19 +878,24 @@ function App() {
   };
   const searchData = async (i, j) => {
     setStatus(true);
+    setCd(false);
     const d = await fetch(
       `https://api.openweathermap.org/data/2.5/onecall?lat=${i}&lon=${j}&exclude=minutely,alerts&units=metric&appid=db7a74be0f30ca31539e9daa0f2fd658`
     );
     const s = await d.json();
-
     setStore([...s.daily]);
-
+    const sunrisedata = [];
+    const sunrise = new Date(s.current.sunrise * 1000);
+    const sunset = new Date(s.current.sunset * 1000);
+    sunrisedata.push(sunrise, sunset);
+    setSunrise(sunrisedata);
     const arr = [];
     s.hourly.map((i) => {
       arr.push(i.temp);
     });
     setHour(arr);
   };
+  const updatedaytemp = () => {};
   //fetch current data
   useEffect(() => {
     getdata();
@@ -947,20 +960,26 @@ function App() {
                     style={{
                       width: "140px",
                       height: "150px",
-                      border: "5px solid #008ffb",
+                      border: "4px solid #008ffb",
                     }}
-                    onClick={searchData}
+                    onClick={() => {
+                      searchData();
+                      setDt(i.temp.max);
+                      setCd(true);
+                    }}
                     className="dailyData"
                   >
-                    <span>{names[j]}</span>
+                    <span>{names[j]} </span>
                     <br />
                     <img
                       src={`http://openweathermap.org/img/wn/${i.weather[0].icon}@2x.png`}
                       style={{ width: "80px", height: "80px" }}
                     />
-                    <span>{i.temp.day} &deg;</span>
+                    <span>{Math.floor(i.temp.min)}&deg;C</span>
+                    &nbsp;
+                    <span>{Math.floor(i.temp.max)}&deg;C</span>
                     <br />
-                    <span>{i.weather[0].main}</span>
+                    <span>{i.weather[0].main} </span>
                   </div>
                 );
               })}
@@ -968,13 +987,17 @@ function App() {
           <div className="mainContainer">
             <div
               style={{
-                width: "100px",
+                width: "200px",
                 height: "100px",
                 display: "flex",
                 marginLeft: "20px",
               }}
             >
-              <h1> {current && current[0].temp}&deg;</h1>
+              {cd == false ? (
+                <h1> {current && current[0].temp}&deg; C</h1>
+              ) : (
+                <h1> {Math.floor(dt)}&deg; C</h1>
+              )}
               <img
                 src={`http://openweathermap.org/img/wn/${current[0].id}@2x.png`}
               />
@@ -983,6 +1006,7 @@ function App() {
               daily={hour}
               pressure={current[0].pressure}
               humidity={current[0].humidity}
+              data1={sunrise}
             />
           </div>
         </>

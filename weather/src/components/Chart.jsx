@@ -22,7 +22,7 @@ ChartJS.register(
   Filler
 );
 
-export const DynamicChart = ({ daily, pressure, humidity }) => {
+export const DynamicChart = ({ daily, pressure, humidity, data1 }) => {
   let arr = daily.slice(0, 25);
   const [data, setData] = useState({
     labels: [
@@ -67,6 +67,7 @@ export const DynamicChart = ({ daily, pressure, humidity }) => {
       },
     ],
   });
+
   function up() {
     let d = {
       ...data,
@@ -87,6 +88,7 @@ export const DynamicChart = ({ daily, pressure, humidity }) => {
     };
     setData(d);
   }
+  // console.log(data1[0].getHours());
 
   return (
     <div className="chart">
@@ -116,6 +118,39 @@ export const DynamicChart = ({ daily, pressure, humidity }) => {
           <span>
             {humidity}
             <b> %</b>
+          </span>
+        </h2>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: "100%",
+          gap: "20px",
+          marginTop: "10px",
+        }}
+      >
+        <h2
+          style={{ backgroundColor: "#b5dffe", width: "50%", height: "70px" }}
+        >
+          Sunrise
+          <br />
+          {data1[0].getHours() < 9
+            ? "0" + data1[0].getHours()
+            : data1[0].getHours()}
+          :{data1[0].getMinutes()} am
+        </h2>
+
+        <h2
+          style={{ backgroundColor: "#b5dffe", width: "50%", height: "70px" }}
+        >
+          Sunset
+          <br />
+          <span>
+            {data1[1].getHours() < 9
+              ? "0" + data1[1].getHours()
+              : data1[1].getHours()}
+            :{data1[1].getMinutes()} pm
           </span>
         </h2>
       </div>
